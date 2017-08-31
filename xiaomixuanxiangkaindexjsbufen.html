@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,div,ul,li,span,a{margin: 0; padding: 0;}
+        ul{list-style-type: none;}
+        a{text-decoration: none;color: purple;}
+        i{font-style: normal;}
+        .navList{
+            width: 150px;
+            margin: 50px 200px;
+            position: relative;
+        }
+        .navList ul{
+            width: 100%;
+            overflow: hidden;
+        }
+        .navList ul li{
+            height: 30px;
+            line-height: 30px;
+            background-color: pink;
+            text-align: center;
+            cursor: pointer;
+        }
+        .navList li span{
+            display: block;
+        }
+        .navList .subNav{
+            width: 200px;
+            position: absolute;
+            right: -200px;
+            top: 0;
+            display: none;
+        }
+        .navList .subNav li{
+            height: 30px;
+            line-height: 30px;
+            padding-left: 20px;
+            background-color: yellow;
+        }
+        .navList li span.current{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+<div class="navList">
+    <ul>
+        <li>
+            <span>软件培训 <i style="float: right;padding-right: 10px;">&gt;</i></span>
+            <ul id="subNav" class="subNav">
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <span>视觉实际</span>
+            <ul class="subNav">
+                <li><a href="javascript;">web前端</a></li>
+                <li><a href="javascript;">web前端</a></li>
+                <li><a href="javascript;">web前端</a></li>
+                <li><a href="javascript;">web前端</a></li>
+                <li><a href="javascript;">web前端</a></li>
+                <li><a href="javascript;">web前端</a></li>
+                <li><a href="javascript;">web前端</a></li>
+                <li><a href="javascript;">web前端</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <span>营销培训</span>
+            <ul class="subNav">
+                <li><a href="javascript;">安卓</a></li>
+                <li><a href="javascript;">安卓</a></li>
+                <li><a href="javascript;">安卓</a></li>
+                <li><a href="javascript;">安卓</a></li>
+                <li><a href="javascript;">安卓</a></li>
+                <li><a href="javascript;">安卓</a></li>
+                <li><a href="javascript;">安卓</a></li>
+                <li><a href="javascript;">安卓</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <span>红叶设计</span>
+            <ul class="subNav">
+                <li><a href="javascript;">php</a></li>
+                <li><a href="javascript;">php</a></li>
+                <li><a href="javascript;">php</a></li>
+                <li><a href="javascript;">php</a></li>
+                <li><a href="javascript;">php</a></li>
+                <li><a href="javascript;">php</a></li>
+                <li><a href="javascript;">php</a></li>
+                <li><a href="javascript;">php</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <span>动漫游戏</span>
+            <ul class="subNav">
+                <li><a href="javascript;">动漫游戏</a></li>
+                <li><a href="javascript;">动漫游戏</a></li>
+                <li><a href="javascript;">动漫游戏</a></li>
+                <li><a href="javascript;">动漫游戏</a></li>
+                <li><a href="javascript;">动漫游戏</a></li>
+                <li><a href="javascript;">动漫游戏</a></li>
+                <li><a href="javascript;">动漫游戏</a></li>
+                <li><a href="javascript;">动漫游戏</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <span>软件培训</span>
+            <ul class="subNav">
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <span>软件培训</span>
+            <ul class="subNav">
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <span>软件培训</span>
+            <ul class="subNav">
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+                <li><a href="javascript;">Java</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+<script>
+    var spans = document.getElementsByTagName("span");
+    var lis = document.getElementsByTagName("ul");
+    for(var i=0;i<spans.length;i++){
+        spans[i].index = i;
+        spans[i].onmouseover = function () {
+            for(var i=0;i<spans.length;i++){
+                spans[i].className = "";
+                lis[i+1].style.display = "none";
+            }
+            spans[this.index].className = "current";
+            lis[this.index + 1].style.display = "block";
+        }
+        spans[i].onmouseout = function () {
+            spans[this.index].className = "";
+            lis[this.index + 1].style.display = "none";
+        }
+    }
+</script>

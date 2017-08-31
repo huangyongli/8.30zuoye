@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">1</div>
+<script>
+    var oBox = document.getElementById("box");
+    oBox.onclick = function () {
+        alert("1");
+    }
+    oBox.onclick = function () {
+        alert("2");
+    }
+    oBox.onclick = function () {
+        alert("3");
+    }
+</script>
+</body>
+</html>
